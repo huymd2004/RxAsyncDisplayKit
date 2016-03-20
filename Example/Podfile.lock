@@ -1,0 +1,47 @@
+PODS:
+  - AsyncDisplayKit (1.9.6):
+    - AsyncDisplayKit/ASDealloc2MainObject (= 1.9.6)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.6)
+  - Nimble (3.1.0)
+  - Quick (0.9.1)
+  - RxAsyncDisplayKit (0.1.0):
+    - AsyncDisplayKit (= 1.9.6)
+    - RxCocoa (~> 2.2.0)
+    - RxDataSources (~> 0.6.1)
+    - RxSwift (~> 2.2.0)
+  - RxBlocking (2.2.0):
+    - RxSwift (~> 2.2)
+  - RxCocoa (2.2.0):
+    - RxSwift (~> 2.2)
+  - RxDataSources (0.6.1):
+    - RxCocoa (~> 2.2)
+    - RxSwift (~> 2.2)
+  - RxSwift (2.2.0)
+
+DEPENDENCIES:
+  - AsyncDisplayKit (= 1.9.6)
+  - Nimble (~> 3.1.0)
+  - Quick (~> 0.9.1)
+  - RxAsyncDisplayKit (from `../`)
+  - RxBlocking (~> 2.2.0)
+  - RxCocoa (~> 2.2.0)
+  - RxDataSources (~> 0.6.1)
+  - RxSwift (~> 2.2.0)
+
+EXTERNAL SOURCES:
+  RxAsyncDisplayKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AsyncDisplayKit: 56b2845c87345324cb3af3c43d3c3a4556a275be
+  Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
+  RxAsyncDisplayKit: 6627698ba53cfb76fd8473efbb738bc43a076be2
+  RxBlocking: 5bbc826774c4290effa8fe070841e9d45e864639
+  RxCocoa: 42efb7a7145a8d1d5878e94ce48a580d29e0c796
+  RxDataSources: f201802aa904bcbc17c38b82e92f282df401a0ce
+  RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
+
+PODFILE CHECKSUM: afa0dde44ca0ebf1b7b9505a79aad85b5496649f
+
+COCOAPODS: 1.0.0.beta.6

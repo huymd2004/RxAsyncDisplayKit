@@ -1,13 +1,21 @@
 source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
 use_frameworks!
 
-target 'RxAsyncDisplayKit_Example', :exclusive => true do
-  pod 'RxAsyncDisplayKit', :path => '../'
-end
-
-target 'RxAsyncDisplayKit_Tests', :exclusive => true do
+target 'RxAsyncDisplayKit_Example' do
   pod 'RxAsyncDisplayKit', :path => '../'
 
-  pod 'Quick', '~> 0.8.0'
-  pod 'Nimble', '3.0.0'
+  pod 'RxSwift', '~> 2.2.0'
+  pod 'RxCocoa', '~> 2.2.0'
+  pod 'RxBlocking', '~> 2.2.0'
+  pod 'RxDataSources', '~> 0.6.1'
+  pod 'AsyncDisplayKit', '= 1.9.6'
+  
+
+  target 'RxAsyncDisplayKit_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 0.9.1'
+    pod 'Nimble', '~> 3.1.0'
+  end
 end

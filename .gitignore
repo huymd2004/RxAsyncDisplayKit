@@ -30,4 +30,24 @@ Carthage
 # Note: if you ignore the Pods directory, make sure to uncomment
 # `pod install` in .travis.yml
 #
-# Pods/
+Example/Pods/
+
+Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+Carthage/Checkouts
+
+Carthage/Build
+
+#JetBrain IDEs
+.idea/
+
+#Mac temporary file
+.DS_Store
+
+#Settings
+
+
+#node
+node_modules
+npm-debug.log
