@@ -22,7 +22,7 @@ pod "RxAsyncDisplayKit"
 
 ## Author
 
-Lance Zhu, lzhu@lai.io
+Lance Zhu, lancezhu77@gmail.com
 
 ## License
 

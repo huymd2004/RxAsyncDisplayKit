@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = "https://github.com/Hxucaa/RxAsyncDisplayKit"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Lance Zhu" => "lancezhu77@gmail.com" }
   s.source           = { :git => "https://github.com/Hxucaa/RxAsyncDisplayKit.git", :tag => s.version.to_s }
