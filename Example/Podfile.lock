@@ -2,31 +2,31 @@ PODS:
   - AsyncDisplayKit (1.9.6):
     - AsyncDisplayKit/ASDealloc2MainObject (= 1.9.6)
   - AsyncDisplayKit/ASDealloc2MainObject (1.9.6)
-  - Nimble (3.1.0)
+  - Nimble (3.2.0)
   - Quick (0.9.1)
   - RxAsyncDisplayKit (0.1.0):
     - AsyncDisplayKit (= 1.9.6)
-    - RxCocoa (~> 2.2.0)
+    - RxCocoa (~> 2.3.1)
     - RxDataSources (~> 0.6.1)
-    - RxSwift (~> 2.2.0)
-  - RxBlocking (2.2.0):
-    - RxSwift (~> 2.2)
-  - RxCocoa (2.2.0):
-    - RxSwift (~> 2.2)
-  - RxDataSources (0.6.1):
+    - RxSwift (~> 2.3.1)
+  - RxBlocking (2.3.1):
+    - RxSwift (~> 2.3.1)
+  - RxCocoa (2.3.1):
+    - RxSwift (~> 2.3.1)
+  - RxDataSources (0.6.2):
     - RxCocoa (~> 2.2)
     - RxSwift (~> 2.2)
-  - RxSwift (2.2.0)
+  - RxSwift (2.3.1)
 
 DEPENDENCIES:
   - AsyncDisplayKit (= 1.9.6)
-  - Nimble (~> 3.1.0)
+  - Nimble (~> 3.2.0)
   - Quick (~> 0.9.1)
   - RxAsyncDisplayKit (from `../`)
-  - RxBlocking (~> 2.2.0)
-  - RxCocoa (~> 2.2.0)
-  - RxDataSources (~> 0.6.1)
-  - RxSwift (~> 2.2.0)
+  - RxBlocking (~> 2.3.1)
+  - RxCocoa (~> 2.3.1)
+  - RxDataSources (~> 0.6.2)
+  - RxSwift (~> 2.3.1)
 
 EXTERNAL SOURCES:
   RxAsyncDisplayKit:
@@ -34,14 +34,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AsyncDisplayKit: 56b2845c87345324cb3af3c43d3c3a4556a275be
-  Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: a5221fc21788b6aeda934805e68b061839bc3165
-  RxAsyncDisplayKit: 6627698ba53cfb76fd8473efbb738bc43a076be2
-  RxBlocking: 5bbc826774c4290effa8fe070841e9d45e864639
-  RxCocoa: 42efb7a7145a8d1d5878e94ce48a580d29e0c796
-  RxDataSources: f201802aa904bcbc17c38b82e92f282df401a0ce
-  RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
+  RxAsyncDisplayKit: 2acc84a07ea3b82b49b569d0ae2203825e6b6216
+  RxBlocking: 84fd81865a641a3843b33bae7b8315e78ddbd383
+  RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
+  RxDataSources: 9ae26211019e6afb7391125940d719b4326e94a4
+  RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
 
-PODFILE CHECKSUM: afa0dde44ca0ebf1b7b9505a79aad85b5496649f
+PODFILE CHECKSUM: 894cf102f1ed6dc6278fbfc69e7d9348140ac48a
 
 COCOAPODS: 1.0.0.beta.6

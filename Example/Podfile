@@ -5,10 +5,10 @@ use_frameworks!
 target 'RxAsyncDisplayKit_Example' do
   pod 'RxAsyncDisplayKit', :path => '../'
 
-  pod 'RxSwift', '~> 2.2.0'
-  pod 'RxCocoa', '~> 2.2.0'
-  pod 'RxBlocking', '~> 2.2.0'
-  pod 'RxDataSources', '~> 0.6.1'
+  pod 'RxSwift', '~> 2.3.1'
+  pod 'RxCocoa', '~> 2.3.1'
+  pod 'RxBlocking', '~> 2.3.1'
+  pod 'RxDataSources', '~> 0.6.2'
   pod 'AsyncDisplayKit', '= 1.9.6'
   
 
@@ -16,6 +16,6 @@ target 'RxAsyncDisplayKit_Example' do
     inherit! :search_paths
 
     pod 'Quick', '~> 0.9.1'
-    pod 'Nimble', '~> 3.1.0'
+    pod 'Nimble', '~> 3.2.0'
   end
 end
