@@ -8,7 +8,6 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
 import RxDataSources
 import AsyncDisplayKit
 
@@ -20,7 +19,7 @@ public class RxASTableViewSectionedReloadDataSource<S: SectionModelType> : RxAST
     }
     
     public func tableView(tableView: ASTableView, observedEvent: Event<Element>) {
-        UIBindingObserver(UIElement: self) { dataSource, element in
+        ASDKUIBindingObserver(UIElement: self) { dataSource, element in
             dataSource.setSections(element)
             tableView.reloadData()
             }.on(observedEvent)

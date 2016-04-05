@@ -21,19 +21,20 @@ class RepositoryCell : ASCellNode {
     init(name: String, url: String) {
         super.init()
         
+        
         nameText.name = "Name"
         nameText.attributedString = NSAttributedString(string: name, attributes: [
-            NSFontAttributeName: 15,
+            NSFontAttributeName: UIFont.systemFontOfSize(15),
             NSForegroundColorAttributeName: UIColor.blackColor()
             ])
         nameText.flexShrink = true
         nameText.maximumNumberOfLines = 1
         nameText.truncationMode = NSLineBreakMode.ByCharWrapping
         addSubnode(nameText)
-        
+
         urlText.name = "URL"
         urlText.attributedString = NSAttributedString(string: url, attributes: [
-            NSFontAttributeName: 13,
+            NSFontAttributeName: UIFont.systemFontOfSize(13),
             NSForegroundColorAttributeName: UIColor.blackColor()
             ])
         urlText.flexShrink = true
@@ -48,16 +49,16 @@ class RepositoryCell : ASCellNode {
         stack.justifyContent = .Start
         stack.alignItems = .Start
         stack.setChildren([nameText, urlText])
-//        stack.sizeRange = ASRelativeSizeRange(
-//            min: ASRelativeSize(
-//                width: ASRelativeDimension(type: .Percent, value: 1.0),
-//                height: ASRelativeDimension(type: .Points, value: constrainedSize.min.height * 0.3)
-//            ),
-//            max: ASRelativeSize(
-//                width: ASRelativeDimension(type: .Percent, value: 1.0),
-//                height: ASRelativeDimension(type: .Points, value: constrainedSize.max.height * 0.6)
-//            )
-//        )
+        stack.sizeRange = ASRelativeSizeRange(
+            min: ASRelativeSize(
+                width: ASRelativeDimension(type: .Percent, value: 1.0),
+                height: ASRelativeDimension(type: .Points, value: constrainedSize.min.height * 0.3)
+            ),
+            max: ASRelativeSize(
+                width: ASRelativeDimension(type: .Percent, value: 1.0),
+                height: ASRelativeDimension(type: .Points, value: constrainedSize.max.height * 0.6)
+            )
+        )
         
         return ASInsetLayoutSpec(
             insets: UIEdgeInsets(
@@ -114,16 +115,9 @@ class RxPaginationViewController: _BaseViewController, ASTableViewDelegate {
 //        let tableView = self.tableView
 //        let searchBar = self.searchBar
         
-//        dataSource.cellFactory = { (tv, ip, repository: Repository) in
-//            let cell = tv.dequeueReusableCellWithIdentifier("Cell")!
-//            cell.textLabel?.text = repository.name
-//            cell.detailTextLabel?.text = repository.url
-//            return cell
-//        }
         dataSource.configureCell = { (dataSource: RxASTableViewSectionedDataSource<SectionModel<String, Repository>>, tableView, indexPath, repository) in
-//            let cell = RepositoryCell(name: repository.name, url: repository.url)
-//            return cell
-            return ASCellNode()
+            let cell = RepositoryCell(name: repository.name, url: repository.url)
+            return cell
         }
         
         dataSource.titleForHeaderInSection = { (dataSource, sectionIndex) in
@@ -133,11 +127,11 @@ class RxPaginationViewController: _BaseViewController, ASTableViewDelegate {
         
         
         let loadNextPageTrigger = tableView.rx_asyncContentOffset
-            .flatMap { offset in
+            .flatMap { offset -> Observable<Void> in
                 RxPaginationViewController.isNearTheBottomEdge(offset, self.tableView)
                     ? Observable.just()
                     : Observable.empty()
-        }
+            }
         
         let searchResult = searchBar.rx_text.asDriver()
             .throttle(0.3)
@@ -155,7 +149,6 @@ class RxPaginationViewController: _BaseViewController, ASTableViewDelegate {
             .map {
                 $0.serviceState
             }
-            .debug("What is here")
             .drive(navigationController!.rx_serviceState)
             .addDisposableTo(disposeBag)
         
@@ -163,11 +156,7 @@ class RxPaginationViewController: _BaseViewController, ASTableViewDelegate {
             .map {
                 [SectionModel(model: "Repositories", items: $0.repositories)]
             }
-            .debug("Next")
-            .drive({ (obs) -> Disposable in
-                return self.tableView.rx_itemsWithAsyncDataSource(self.dataSource)(source: obs)
-            })
-//            .drive(tableView.rx_itemsWithAsyncDataSource(dataSource))
+            .drive(tableView.rx_itemsWithAsyncDataSource(dataSource))
             .addDisposableTo(disposeBag)
         
         searchResult

@@ -107,7 +107,13 @@ public class _ASTableViewSectionedDataSource: NSObject, ASTableViewDataSource {
     public func tableView(tableView: ASTableView, nodeForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNode {
         return _tableView(tableView, nodeForRowAtIndexPath: indexPath)
     }
+    public func tableViewLockDataSource(tableView: ASTableView) {
+        print("sssss")
+    }
     
+    public func tableViewUnlockDataSource(tableView: ASTableView) {
+        print("sdfsdfsdf")
+    }
     //    func _tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
     //        return (nil as ASCellNodeBlock?)!
     //    }

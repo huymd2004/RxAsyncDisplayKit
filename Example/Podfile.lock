@@ -1,11 +1,19 @@
 PODS:
-  - AsyncDisplayKit (1.9.6):
-    - AsyncDisplayKit/ASDealloc2MainObject (= 1.9.6)
-  - AsyncDisplayKit/ASDealloc2MainObject (1.9.6)
+  - AsyncDisplayKit (1.9.8):
+    - AsyncDisplayKit/PINRemoteImage (= 1.9.8)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.8)
+  - AsyncDisplayKit/PINRemoteImage (1.9.8):
+    - AsyncDisplayKit/ASDealloc2MainObject
+    - PINRemoteImage/iOS (>= 2.1.2)
   - Nimble (3.2.0)
+  - PINCache (2.2.2)
+  - PINRemoteImage/Core (2.1.2):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/iOS (2.1.2):
+    - PINRemoteImage/Core
   - Quick (0.9.1)
   - RxAsyncDisplayKit (0.1.0):
-    - AsyncDisplayKit (= 1.9.6)
+    - AsyncDisplayKit
     - RxCocoa (~> 2.3.1)
     - RxDataSources (~> 0.6.1)
     - RxSwift (~> 2.3.1)
@@ -19,7 +27,7 @@ PODS:
   - RxSwift (2.3.1)
 
 DEPENDENCIES:
-  - AsyncDisplayKit (= 1.9.6)
+  - AsyncDisplayKit (from `https://github.com/facebook/AsyncDisplayKit.git`, commit `0ef9d295b9951c9b2904a03f5f9c23c92d057c4a`)
   - Nimble (~> 3.2.0)
   - Quick (~> 0.9.1)
   - RxAsyncDisplayKit (from `../`)
@@ -29,19 +37,29 @@ DEPENDENCIES:
   - RxSwift (~> 2.3.1)
 
 EXTERNAL SOURCES:
+  AsyncDisplayKit:
+    :commit: 0ef9d295b9951c9b2904a03f5f9c23c92d057c4a
+    :git: https://github.com/facebook/AsyncDisplayKit.git
   RxAsyncDisplayKit:
     :path: ../
 
+CHECKOUT OPTIONS:
+  AsyncDisplayKit:
+    :commit: 0ef9d295b9951c9b2904a03f5f9c23c92d057c4a
+    :git: https://github.com/facebook/AsyncDisplayKit.git
+
 SPEC CHECKSUMS:
-  AsyncDisplayKit: 56b2845c87345324cb3af3c43d3c3a4556a275be
+  AsyncDisplayKit: a0a50ce59bdad7cf2fbd9dfda35c03ce60d98469
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
+  PINRemoteImage: 2ce3f1fcc52f0360a3821f91f1a1bc653c5d2338
   Quick: a5221fc21788b6aeda934805e68b061839bc3165
-  RxAsyncDisplayKit: 2acc84a07ea3b82b49b569d0ae2203825e6b6216
+  RxAsyncDisplayKit: 66d7691446638ee22c3ae35d796c0ff5d5ba1ea4
   RxBlocking: 84fd81865a641a3843b33bae7b8315e78ddbd383
   RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
   RxDataSources: 9ae26211019e6afb7391125940d719b4326e94a4
   RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
 
-PODFILE CHECKSUM: 894cf102f1ed6dc6278fbfc69e7d9348140ac48a
+PODFILE CHECKSUM: 6c94f819db5f4fe70f4a94e6173c49fe932f3ac5
 
 COCOAPODS: 1.0.0.beta.6

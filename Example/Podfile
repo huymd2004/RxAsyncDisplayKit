@@ -9,7 +9,7 @@ target 'RxAsyncDisplayKit_Example' do
   pod 'RxCocoa', '~> 2.3.1'
   pod 'RxBlocking', '~> 2.3.1'
   pod 'RxDataSources', '~> 0.6.2'
-  pod 'AsyncDisplayKit', '= 1.9.6'
+  pod 'AsyncDisplayKit', :git => 'https://github.com/facebook/AsyncDisplayKit.git', :commit => '0ef9d295b9951c9b2904a03f5f9c23c92d057c4a', :inhibit_warnings => true
   
 
   target 'RxAsyncDisplayKit_Tests' do

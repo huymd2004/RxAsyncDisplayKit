@@ -82,35 +82,6 @@ extension ASTableView {
                 }
             }
     }
-    
-    public func haha<DataSource: ASTableViewDataSource>(dataSource: DataSource) {
-        
-    }
-    
-    public func test<DataSource: protocol<RxASTableViewDataSourceType, ASTableViewDataSource>>(dataSource: DataSource) {
-        
-        
-    }
-    /**
-     Binds sequences of elements to table view rows using a custom reactive data used to perform the transformation.
-     
-     - parameter dataSource: Data source used to transform elements to view cells.
-     - parameter source: Observable sequence of items.
-     - returns: Disposable object that can be used to unbind.
-     */
-    public func rxxxx_itemsWithDataSource<DataSource: protocol<RxTableViewDataSourceType, UITableViewDataSource>, S: SequenceType, O: ObservableType where DataSource.Element == S, O.E == S>
-        (dataSource: DataSource)
-        -> (source: O)
-        -> Disposable  {
-            return { source in
-                return source.subscribeProxyDataSourceForObject(self, dataSource: dataSource, retainDataSource: false) { [weak self] (_: RxTableViewDataSourceProxy, event) -> Void in
-                    guard let tableView = self else {
-                        return
-                    }
-                    dataSource.tableView(tableView, observedEvent: event)
-                }
-            }
-    }
 }
     
 // Replace extension methods implemented for UIScrollView
