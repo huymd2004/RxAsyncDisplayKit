@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RxAsyncDisplayKit"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "RxSwift AsyncDisplayKit extension based on RxCocoa"
   s.description      = <<-DESC
 * AsyncDisplayKit extension
