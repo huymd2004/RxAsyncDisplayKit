@@ -13,8 +13,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		7E5663441CB33B4500501F0C /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 7E5663431CB33B4500501F0C /* CHANGELOG.md */; };
 		7E6863C71C9C9FC400EA434D /* RxPaginationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6863C61C9C9FC400EA434D /* RxPaginationViewController.swift */; };
-		7E6863C91C9C9FE700EA434D /* RxTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6863C81C9C9FE700EA434D /* RxTableViewModel.swift */; };
 		7E6863D71C9CA57F00EA434D /* _BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6863D61C9CA57F00EA434D /* _BaseViewController.swift */; };
 		7E6863E51C9CEABF00EA434D /* GitHubSearchRepositoriesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6863E41C9CEABF00EA434D /* GitHubSearchRepositoriesAPI.swift */; };
 		7E6863E71C9CEAE900EA434D /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6863E61C9CEAE900EA434D /* Wireframe.swift */; };
@@ -54,8 +54,8 @@
 		607FACE51AFB9204008FA782 /* RxAsyncDisplayKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxAsyncDisplayKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		7E5663431CB33B4500501F0C /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		7E6863C61C9C9FC400EA434D /* RxPaginationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxPaginationViewController.swift; sourceTree = "<group>"; };
-		7E6863C81C9C9FE700EA434D /* RxTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxTableViewModel.swift; sourceTree = "<group>"; };
 		7E6863D61C9CA57F00EA434D /* _BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _BaseViewController.swift; sourceTree = "<group>"; };
 		7E6863E41C9CEABF00EA434D /* GitHubSearchRepositoriesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubSearchRepositoriesAPI.swift; sourceTree = "<group>"; };
 		7E6863E61C9CEAE900EA434D /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				7E6863C61C9C9FC400EA434D /* RxPaginationViewController.swift */,
-				7E6863C81C9C9FE700EA434D /* RxTableViewModel.swift */,
 				7E6863D61C9CA57F00EA434D /* _BaseViewController.swift */,
 				7E6863E41C9CEABF00EA434D /* GitHubSearchRepositoriesAPI.swift */,
 				7E6863E61C9CEAE900EA434D /* Wireframe.swift */,
@@ -168,6 +167,7 @@
 				C1AC15DA838BBE0956DB9B5A /* RxAsyncDisplayKit.podspec */,
 				DFFBE42896CB1519A5167A12 /* README.md */,
 				17C2E34A698CC85734F0C5CB /* LICENSE */,
+				7E5663431CB33B4500501F0C /* CHANGELOG.md */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -397,6 +397,7 @@
 				7E6863EB1C9CEB2200EA434D /* String+URL.swift in Sources */,
 				7E6863F31C9CECB000EA434D /* Reachability.swift in Sources */,
 				7E6863E51C9CEABF00EA434D /* GitHubSearchRepositoriesAPI.swift in Sources */,
+				7E5663441CB33B4500501F0C /* CHANGELOG.md in Sources */,
 				7E6863C71C9C9FC400EA434D /* RxPaginationViewController.swift in Sources */,
 				7E6863ED1C9CEB4A00EA434D /* Dependencies.swift in Sources */,
 				7E6863E71C9CEAE900EA434D /* Wireframe.swift in Sources */,
@@ -404,7 +405,6 @@
 				7E6863D71C9CA57F00EA434D /* _BaseViewController.swift in Sources */,
 				7E6863E91C9CEAFC00EA434D /* ActivityIndicator.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				7E6863C91C9C9FE700EA434D /* RxTableViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

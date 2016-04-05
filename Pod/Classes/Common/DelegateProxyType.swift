@@ -48,7 +48,9 @@ extension ObservableType {
                 // source can't ever end, otherwise it will release the subscriber
                 .concat(Observable.never())
                 .subscribe { [weak object] (event: Event<E>) in
-                    MainScheduler.ensureExecutingOnScheduler()
+                    
+                    // FIXME: may be don't need this due to work being done on background thread in ASDK???
+//                    MainScheduler.ensureExecutingOnScheduler()
                     
                     if let object = object {
                         assert(proxy === P.currentDelegateFor(object), "Proxy changed from the time it was first set.\nOriginal: \(proxy)\nExisting: \(P.currentDelegateFor(object))")

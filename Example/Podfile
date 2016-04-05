@@ -5,17 +5,17 @@ use_frameworks!
 target 'RxAsyncDisplayKit_Example' do
   pod 'RxAsyncDisplayKit', :path => '../'
 
-  pod 'RxSwift', '~> 2.2.0'
-  pod 'RxCocoa', '~> 2.2.0'
-  pod 'RxBlocking', '~> 2.2.0'
-  pod 'RxDataSources', '~> 0.6.1'
-  pod 'AsyncDisplayKit', '= 1.9.6'
+  pod 'RxSwift', '~> 2.3.1'
+  pod 'RxCocoa', '~> 2.3.1'
+  pod 'RxBlocking', '~> 2.3.1'
+  pod 'RxDataSources', '~> 0.6.2'
+  pod 'AsyncDisplayKit', :git => 'https://github.com/facebook/AsyncDisplayKit.git', :commit => '0ef9d295b9951c9b2904a03f5f9c23c92d057c4a', :inhibit_warnings => true
   
 
   target 'RxAsyncDisplayKit_Tests' do
     inherit! :search_paths
 
     pod 'Quick', '~> 0.9.1'
-    pod 'Nimble', '~> 3.1.0'
+    pod 'Nimble', '~> 3.2.0'
   end
 end

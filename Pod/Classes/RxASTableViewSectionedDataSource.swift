@@ -12,65 +12,8 @@ import RxCocoa
 import RxDataSources
 import AsyncDisplayKit
 
-/**
- * `undefined()` pretends to be able to produce a value of any type `T` which can
- * be very useful whilst writing a program. It happens that you need a value
- * (which can be a function as well) of a certain type but you can't produce it
- * just yet. However, you can always temporarily replace it by `undefined()`.
- *
- * Inspired by Haskell's
- * [undefined](http://hackage.haskell.org/package/base-4.7.0.2/docs/Prelude.html#v:undefined).
- *
- * Invoking `undefined()` will crash your program.
- *
- * Some examples:
- *
- *  - `let x : String = undefined()`
- *  - `let f : String -> Int? = undefined("string to optional int function")`
- *  - `return undefined() /* in any function */`
- *  - `let x : String = (undefined() as Int -> String)(42)`
- *  - ...
- *
- * What a crash looks like:
- *
- * `fatal error: undefined: main.swift, line 131`
- 
- - parameter hint: Hint message
- - parameter file: Optional file name
- - parameter line: Optional line number
- 
- - returns: Inferred calling type.
- */
-func undefined<T>(hint: String="", file: StaticString=__FILE__, line: UInt=__LINE__) -> T {
-    let message = hint == "" ? "" : ": \(hint)"
-    fatalError("undefined \(T.self)\(message)", file:file, line:line)
-}
-
-//public struct SectionModel<Section, ItemType> : SectionModelType, CustomStringConvertible {
-//    public typealias Item = ItemType
-//    public var model: Section
-//    
-//    public var items: [Item]
-//    
-//    public init(model: Section, items: [Item]) {
-//        self.model = model
-//        self.items = items
-//    }
-//    
-//    public init(original: SectionModel, items: [Item]) {
-//        self.model = original.model
-//        self.items = items
-//    }
-//    
-//    public var description: String {
-//        get {
-//            return "\(self.model) > \(items)"
-//        }
-//    }
-//}
-
 // objc monkey business
-public class _RxASTableViewSectionedDataSource: NSObject, ASTableViewDataSource {
+public class _ASTableViewSectionedDataSource: NSObject, ASTableViewDataSource {
     
     
     func _numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -90,7 +33,7 @@ public class _RxASTableViewSectionedDataSource: NSObject, ASTableViewDataSource 
     }
     
     func _tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return undefined("Call `tableView:nodeForRowAtIndexPath:` instead!")
+        fatalError("Call `tableView:nodeForRowAtIndexPath:` instead!")
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -165,28 +108,36 @@ public class _RxASTableViewSectionedDataSource: NSObject, ASTableViewDataSource 
         return _tableView(tableView, nodeForRowAtIndexPath: indexPath)
     }
     
-    //    func _tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
-    //        return (nil as ASCellNodeBlock?)!
-    //    }
-    //
-    //    /**
-    //     * Similar to -tableView:nodeForRowAtIndexPath:
-    //     * This method takes precedence over tableView:nodeForRowAtIndexPath: if implemented.
-    //     * @param tableView The sender.
-    //     *
-    //     * @param indexPath The index path of the requested node.
-    //     *
-    //     * @returns a block that creates the node for display at this indexpath.
-    //     *   Must be thread-safe (can be called on the main thread or a background
-    //     *   queue) and should not implement reuse (it will be called once per row).
-    //     */
-    //    public func tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
-    //        return _tableView(tableView, nodeBlockForRowAtIndexPath: indexPath)
-    //    }
+//    public func tableViewLockDataSource(tableView: ASTableView) {
+//        
+//    }
+//    
+//    public func tableViewUnlockDataSource(tableView: ASTableView) {
+//        
+//    }
+    
+//    func _tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
+//        return (nil as ASCellNodeBlock?)!
+//    }
+//
+//    /**
+//     * Similar to -tableView:nodeForRowAtIndexPath:
+//     * This method takes precedence over tableView:nodeForRowAtIndexPath: if implemented.
+//     * @param tableView The sender.
+//     *
+//     * @param indexPath The index path of the requested node.
+//     *
+//     * @returns a block that creates the node for display at this indexpath.
+//     *   Must be thread-safe (can be called on the main thread or a background
+//     *   queue) and should not implement reuse (it will be called once per row).
+//     */
+//    public func tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
+//        return _tableView(tableView, nodeBlockForRowAtIndexPath: indexPath)
+//    }
 }
 
 //public class RxASTableViewSectionedDataSource<S: SectionModelType>: _ASTableViewSectionedDataSource, SectionedViewDataSourceType {
-public class RxASTableViewSectionedDataSource<S: SectionModelType>: _RxASTableViewSectionedDataSource {
+public class RxASTableViewSectionedDataSource<S: SectionModelType>: _ASTableViewSectionedDataSource, SectionedViewDataSourceType {
 
     public typealias I = S.Item
     public typealias Section = S
@@ -257,6 +208,10 @@ public class RxASTableViewSectionedDataSource<S: SectionModelType>: _RxASTableVi
         return _sectionModels[section].items.count
     }
     
+    override func _tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        fatalError("Call `tableView:nodeForRowAtIndexPath:` instead!")
+    }
+    
     override func _tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return titleForHeaderInSection?(self, section: section)
     }
@@ -266,22 +221,35 @@ public class RxASTableViewSectionedDataSource<S: SectionModelType>: _RxASTableVi
     }
     
     override func _tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return canEditRowAtIndexPath?(self, indexPath: indexPath) ??
-            super._tableView(tableView, canMoveRowAtIndexPath: indexPath)
+        guard let canEditRow = canEditRowAtIndexPath?(self, indexPath: indexPath) else {
+            return super._tableView(tableView, canMoveRowAtIndexPath: indexPath)
+        }
+        
+        return canEditRow
     }
     
     override func _tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return canMoveRowAtIndexPath?(self, indexPath: indexPath) ??
-            super._tableView(tableView, canMoveRowAtIndexPath: indexPath)
+        guard let canMoveRow = canMoveRowAtIndexPath?(self, indexPath: indexPath) else {
+            return super._tableView(tableView, canMoveRowAtIndexPath: indexPath)
+        }
+        
+        return canMoveRow
     }
     
     override func _sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        return sectionIndexTitles?(self) ?? super._sectionIndexTitlesForTableView(tableView)
+        guard let titles = sectionIndexTitles?(self) else {
+            return super._sectionIndexTitlesForTableView(tableView)
+        }
+        
+        return titles
     }
     
     override func _tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
-        return sectionForSectionIndexTitle?(self, title: title, index: index) ??
-            super._tableView(tableView, sectionForSectionIndexTitle: title, atIndex: index)
+        guard let section  = sectionForSectionIndexTitle?(self, title: title, index: index) else {
+            return super._tableView(tableView, sectionForSectionIndexTitle: title, atIndex: index)
+        }
+        
+        return section
     }
     
     // MARK: ASTableDataSource Methods
