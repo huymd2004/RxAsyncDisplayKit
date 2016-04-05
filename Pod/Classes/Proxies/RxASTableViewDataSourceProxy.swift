@@ -73,7 +73,7 @@ public class RxASTableViewDataSourceProxy : DelegateProxy, ASTableViewDataSource
     }
     
     public func tableView(tableView: ASTableView, nodeForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNode {
-        return (_requiredMethodsDataSource ?? asTableViewDataSourceNotSet).tableView(tableView, nodeForRowAtIndexPath: indexPath)
+        return (_requiredMethodsDataSource ?? asTableViewDataSourceNotSet).tableView!(tableView, nodeForRowAtIndexPath: indexPath)
     }
     
     // MARK: proxy

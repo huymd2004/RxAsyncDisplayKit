@@ -107,31 +107,33 @@ public class _ASTableViewSectionedDataSource: NSObject, ASTableViewDataSource {
     public func tableView(tableView: ASTableView, nodeForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNode {
         return _tableView(tableView, nodeForRowAtIndexPath: indexPath)
     }
-    public func tableViewLockDataSource(tableView: ASTableView) {
-        print("sssss")
-    }
     
-    public func tableViewUnlockDataSource(tableView: ASTableView) {
-        print("sdfsdfsdf")
-    }
-    //    func _tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
-    //        return (nil as ASCellNodeBlock?)!
-    //    }
-    //
-    //    /**
-    //     * Similar to -tableView:nodeForRowAtIndexPath:
-    //     * This method takes precedence over tableView:nodeForRowAtIndexPath: if implemented.
-    //     * @param tableView The sender.
-    //     *
-    //     * @param indexPath The index path of the requested node.
-    //     *
-    //     * @returns a block that creates the node for display at this indexpath.
-    //     *   Must be thread-safe (can be called on the main thread or a background
-    //     *   queue) and should not implement reuse (it will be called once per row).
-    //     */
-    //    public func tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
-    //        return _tableView(tableView, nodeBlockForRowAtIndexPath: indexPath)
-    //    }
+//    public func tableViewLockDataSource(tableView: ASTableView) {
+//        
+//    }
+//    
+//    public func tableViewUnlockDataSource(tableView: ASTableView) {
+//        
+//    }
+    
+//    func _tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
+//        return (nil as ASCellNodeBlock?)!
+//    }
+//
+//    /**
+//     * Similar to -tableView:nodeForRowAtIndexPath:
+//     * This method takes precedence over tableView:nodeForRowAtIndexPath: if implemented.
+//     * @param tableView The sender.
+//     *
+//     * @param indexPath The index path of the requested node.
+//     *
+//     * @returns a block that creates the node for display at this indexpath.
+//     *   Must be thread-safe (can be called on the main thread or a background
+//     *   queue) and should not implement reuse (it will be called once per row).
+//     */
+//    public func tableView(tableView: ASTableView, nodeBlockForRowAtIndexPath indexPath: NSIndexPath) -> ASCellNodeBlock {
+//        return _tableView(tableView, nodeBlockForRowAtIndexPath: indexPath)
+//    }
 }
 
 //public class RxASTableViewSectionedDataSource<S: SectionModelType>: _ASTableViewSectionedDataSource, SectionedViewDataSourceType {

@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.dependency 'RxSwift', '~> 2.3.1'
   s.dependency 'RxCocoa', '~> 2.3.1'
   s.dependency 'RxDataSources', '~> 0.6.1'
-  s.dependency 'AsyncDisplayKit', '= 1.9.6'
+  s.dependency 'AsyncDisplayKit' 
 end
