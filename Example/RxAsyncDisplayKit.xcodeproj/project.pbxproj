@@ -115,22 +115,13 @@
 		607FACD21AFB9204008FA782 /* Example for RxAsyncDisplayKit */ = {
 			isa = PBXGroup;
 			children = (
+				7E5663541CBDE13B00501F0C /* Service */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				7E6863C61C9C9FC400EA434D /* RxPaginationViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				7E6863C61C9C9FC400EA434D /* RxPaginationViewController.swift */,
-				7E6863D61C9CA57F00EA434D /* _BaseViewController.swift */,
-				7E6863E41C9CEABF00EA434D /* GitHubSearchRepositoriesAPI.swift */,
-				7E6863E61C9CEAE900EA434D /* Wireframe.swift */,
-				7E6863E81C9CEAFC00EA434D /* ActivityIndicator.swift */,
-				7E6863EA1C9CEB2200EA434D /* String+URL.swift */,
-				7E6863EC1C9CEB4A00EA434D /* Dependencies.swift */,
-				7E6863EE1C9CEB6800EA434D /* ReachabilityService.swift */,
-				7E6863F01C9CEB8100EA434D /* Example.swift */,
-				7E6863F21C9CECB000EA434D /* Reachability.swift */,
-				7E6863F41C9CED8200EA434D /* UINavigationController+Extensions.swift */,
 			);
 			name = "Example for RxAsyncDisplayKit";
 			path = RxAsyncDisplayKit;
@@ -170,6 +161,23 @@
 				7E5663431CB33B4500501F0C /* CHANGELOG.md */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		7E5663541CBDE13B00501F0C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7E6863D61C9CA57F00EA434D /* _BaseViewController.swift */,
+				7E6863F01C9CEB8100EA434D /* Example.swift */,
+				7E6863F21C9CECB000EA434D /* Reachability.swift */,
+				7E6863F41C9CED8200EA434D /* UINavigationController+Extensions.swift */,
+				7E6863E41C9CEABF00EA434D /* GitHubSearchRepositoriesAPI.swift */,
+				7E6863E61C9CEAE900EA434D /* Wireframe.swift */,
+				7E6863E81C9CEAFC00EA434D /* ActivityIndicator.swift */,
+				7E6863EA1C9CEB2200EA434D /* String+URL.swift */,
+				7E6863EC1C9CEB4A00EA434D /* Dependencies.swift */,
+				7E6863EE1C9CEB6800EA434D /* ReachabilityService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		8ABF2BC9771B15FB432E8A5E /* Pods */ = {

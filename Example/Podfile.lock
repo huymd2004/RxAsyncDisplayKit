@@ -1,65 +1,65 @@
 PODS:
-  - AsyncDisplayKit (1.9.8):
-    - AsyncDisplayKit/PINRemoteImage (= 1.9.8)
-  - AsyncDisplayKit/ASDealloc2MainObject (1.9.8)
-  - AsyncDisplayKit/PINRemoteImage (1.9.8):
+  - AsyncDisplayKit (1.9.7.2):
+    - AsyncDisplayKit/PINRemoteImage (= 1.9.7.2)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.7.2)
+  - AsyncDisplayKit/PINRemoteImage (1.9.7.2):
     - AsyncDisplayKit/ASDealloc2MainObject
     - PINRemoteImage/iOS (>= 2.1.2)
-  - Nimble (3.2.0)
+  - Nimble (4.0.0)
   - PINCache (2.2.2)
   - PINRemoteImage/Core (2.1.2):
     - PINCache (>= 2.1)
   - PINRemoteImage/iOS (2.1.2):
     - PINRemoteImage/Core
-  - Quick (0.9.1)
-  - RxAsyncDisplayKit (0.1.0):
+  - Quick (0.9.2)
+  - RxAsyncDisplayKit (0.1.1):
     - AsyncDisplayKit
-    - RxCocoa (~> 2.3.1)
+    - RxCocoa (~> 2.4)
     - RxDataSources (~> 0.6.1)
-    - RxSwift (~> 2.3.1)
-  - RxBlocking (2.3.1):
-    - RxSwift (~> 2.3.1)
-  - RxCocoa (2.3.1):
-    - RxSwift (~> 2.3.1)
+    - RxSwift (~> 2.4)
+  - RxBlocking (2.4):
+    - RxSwift (~> 2.4)
+  - RxCocoa (2.4):
+    - RxSwift (~> 2.4)
   - RxDataSources (0.6.2):
     - RxCocoa (~> 2.2)
     - RxSwift (~> 2.2)
-  - RxSwift (2.3.1)
+  - RxSwift (2.4)
 
 DEPENDENCIES:
-  - AsyncDisplayKit (from `https://github.com/facebook/AsyncDisplayKit.git`, commit `0ef9d295b9951c9b2904a03f5f9c23c92d057c4a`)
-  - Nimble (~> 3.2.0)
-  - Quick (~> 0.9.1)
+  - AsyncDisplayKit (from `https://github.com/facebook/AsyncDisplayKit.git`, tag `1.9.7.2`)
+  - Nimble (~> 4.0.0)
+  - Quick (~> 0.9.2)
   - RxAsyncDisplayKit (from `../`)
-  - RxBlocking (~> 2.3.1)
-  - RxCocoa (~> 2.3.1)
+  - RxBlocking (~> 2.4)
+  - RxCocoa (~> 2.4)
   - RxDataSources (~> 0.6.2)
-  - RxSwift (~> 2.3.1)
+  - RxSwift (~> 2.4)
 
 EXTERNAL SOURCES:
   AsyncDisplayKit:
-    :commit: 0ef9d295b9951c9b2904a03f5f9c23c92d057c4a
     :git: https://github.com/facebook/AsyncDisplayKit.git
+    :tag: 1.9.7.2
   RxAsyncDisplayKit:
     :path: ../
 
 CHECKOUT OPTIONS:
   AsyncDisplayKit:
-    :commit: 0ef9d295b9951c9b2904a03f5f9c23c92d057c4a
     :git: https://github.com/facebook/AsyncDisplayKit.git
+    :tag: 1.9.7.2
 
 SPEC CHECKSUMS:
-  AsyncDisplayKit: a0a50ce59bdad7cf2fbd9dfda35c03ce60d98469
-  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  AsyncDisplayKit: 1701c47761a3e274b82cc0c77e6294cfa69612f6
+  Nimble: 72bcc3e2f02242e6bfaaf8d9412ca7bfe3d8b417
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 2ce3f1fcc52f0360a3821f91f1a1bc653c5d2338
-  Quick: a5221fc21788b6aeda934805e68b061839bc3165
-  RxAsyncDisplayKit: 66d7691446638ee22c3ae35d796c0ff5d5ba1ea4
-  RxBlocking: 84fd81865a641a3843b33bae7b8315e78ddbd383
-  RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+  RxAsyncDisplayKit: d61c7809dbe71f50a70b8ee9314f8c689f17e788
+  RxBlocking: 1226c1fa0ca1e0ca5f964d4330ca3649f2128680
+  RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61
   RxDataSources: 9ae26211019e6afb7391125940d719b4326e94a4
-  RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
+  RxSwift: 67b9ef4e8b34fb394e200e754c6a09cc16559f94
 
-PODFILE CHECKSUM: 6c94f819db5f4fe70f4a94e6173c49fe932f3ac5
+PODFILE CHECKSUM: 6da992a34d504c8ed81c4dadd0505a2f63bb2ff7
 
-COCOAPODS: 1.0.0.beta.6
+COCOAPODS: 1.0.0.beta.5

@@ -18,8 +18,8 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'RxSwift', '~> 2.3.1'
-  s.dependency 'RxCocoa', '~> 2.3.1'
+  s.dependency 'RxSwift', '~> 2.4'
+  s.dependency 'RxCocoa', '~> 2.4'
   s.dependency 'RxDataSources', '~> 0.6.1'
   s.dependency 'AsyncDisplayKit' 
 end
